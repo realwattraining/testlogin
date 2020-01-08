@@ -57,30 +57,9 @@
         $("#btnLogIn").on("click", function() {
             var pass = $("#password").val();
             var email = document.getElementById("email").value;
-            var lbName = '"error-password"';
-            var message = "please enter Password";
-            // condition.labelError(lbName, message);
-            conditionform.validationNull(email, pass);
+            validationNull(email, pass);
         });
-
-
     });
-
-    // class condition {
-
-    //     static validationNull(email, pass) {
-    //         if (email == "") {
-    //             $("#error-email").text("Plese Input Email");
-    //             $("#email").focus();
-    //             event.preventDefault();
-    //         } else if (pass == "") {
-    //             $("#error-password").text("Plese Input Password");
-    //             $("#password").focus();
-    //             event.preventDefault();
-    //         }
-
-    //     }
-    // }
 </script>
 
 </html>

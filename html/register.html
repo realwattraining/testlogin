@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
 </header>
 
 <body>
@@ -53,22 +54,12 @@
 </html>
 
 <script>
-    $("#btnSave").on("click", function() {
-        var pass = $("#password").val();
-        var email = document.getElementById("email").value;
-        var confirm = document.getElementById("confirm").value;
-
-
+    $(document).ready(function() {
+        $("#btnSave").on("click", function() {
+            var pass = $("#password").val();
+            var email = document.getElementById("email").value;
+            var confirm = document.getElementById("confirm").value;
+            validationNullRegister(email, pass, confirm);
+        });
     });
-
-    // class conditionregister extends condition {
-    //     static validationNull(email, pass, confirm) {
-    //         condition.validationNull(email, pass);
-    //         if (confirm == "") {
-    //             $("#error-confirm").text("Plese Confirm Password");
-    //             $("#confirm").focus();
-    //             event.preventDefault();
-    //         }
-    //     }
-    // }
 </script>
